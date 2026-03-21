@@ -1,6 +1,9 @@
-| № | Topic | File | File Description | Data |
-|---|---|---|---|---|
-| 1.1 | Wall Detection (2D LIDAR + Hough) | [hw1_2d.ipynb](hw1/hw1_2d.ipynb) | 2D lidar simulation, Hough accumulator construction, peak detection, and wall-line visualization. | Synthetic scenes (generated inside the notebook). |
-| 1.2 | Ground Detection (3D + RANSAC) | [hw1_3d.ipynb](hw1/hw1_3d.ipynb) | 3D point cloud reconstruction from KITTI stereo and ground-plane estimation with a custom RANSAC implementation. | `hw1/data/3d` (KITTI: image_2/image_3/calib). |
-| 2 | Path Estimation (Linear Kalman Filter) | [hw2_linear_kalman.ipynb](hw2/hw2_linear_kalman.ipynb) | Smartphone trajectory estimation by fusing GPS distance and accelerometer input with a 1D linear Kalman filter (`position`, `velocity`), including EDA and noise tuning (`std_acc`, `std_meas`). | `hw2/2026-03-0916.48.43.csv` (smartphone sensor log: GPS + accelerometer). |
-| 3 | Attitude Estimation (Euler-based vs Quaternion-based EKF) | [hw3.ipynb](hw3/hw3.ipynb) | Comparative EKF orientation estimation from smartphone sensors with two state representations (Euler angles and quaternions), including Roll/Pitch/Yaw comparison, gimbal-lock analysis, and quaternion norm tracking before normalization. | `hw3/data.csv` (smartphone log: gravity vector + orientation angles). |
+# Домашние задания по Advanced Robotics
+
+| № | Тема | Папка | README | Ноутбук | Краткое описание | Данные |
+|---|---|---|---|---|---|---|
+| 1.1 | Детекция стен (2D LIDAR + Hough) | `hw1_hough_ransac` | [README](hw1_hough_ransac/README.md) | [wall_detection_hough.ipynb](hw1_hough_ransac/wall_detection_hough.ipynb) | Генерация синтетических 2D lidar-сцен, построение Hough accumulator, поиск пиков и визуализация линий стен. | Генерируются внутри ноутбука |
+| 1.2 | Детекция земли (3D + RANSAC) | `hw1_hough_ransac` | [README](hw1_hough_ransac/README.md) | [ground_detection_ransac.ipynb](hw1_hough_ransac/ground_detection_ransac.ipynb) | Реконструкция 3D облака по стереопаре KITTI и выделение плоскости земли собственной реализацией RANSAC. | `hw1_hough_ransac/data/3d` |
+| 2 | Оценка траектории (линейный фильтр Калмана) | `hw2_linear_kalman` | [README](hw2_linear_kalman/README.md) | [smartphone_linear_kalman.ipynb](hw2_linear_kalman/smartphone_linear_kalman.ipynb) | Объединение GPS и акселерометра смартфона в 1D линейном фильтре Калмана для оценки положения и скорости. | `hw2_linear_kalman/2026-03-0916.48.43.csv` |
+| 3 | Оценка ориентации (Euler vs Quaternion EKF) | `hw3_ekf_orientation` | [README](hw3_ekf_orientation/README.md) | [euler_vs_quaternion_ekf.ipynb](hw3_ekf_orientation/euler_vs_quaternion_ekf.ipynb) | Сравнение двух EKF-представлений ориентации смартфона: углы Эйлера и кватернионы. | `hw3_ekf_orientation/data.csv` |
+| 4 | Gaussian Splatting | `hw4_gaussian_splatting` | [README](hw4_gaussian_splatting/README.md) | [gaussian_splatting.ipynb](hw4_gaussian_splatting/gaussian_splatting.ipynb) | Подготовка кадров, SfM/COLMAP, обучение 3D Gaussian Splatting и анализ качества рендера. | `hw4_gaussian_splatting/video.mp4` и артефакты в папке задания |
