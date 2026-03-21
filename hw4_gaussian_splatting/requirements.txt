@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+opencv-python
+scikit-image
+open3d
+torch
+nerfstudio
+jupyterlab
